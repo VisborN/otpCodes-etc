@@ -1,0 +1,3 @@
+gpg encoded_codes.zip.gpg
+unzip encoded_codes.zip 
+rm  encoded_codes.zip

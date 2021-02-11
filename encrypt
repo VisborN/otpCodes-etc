@@ -1,0 +1,11 @@
+zip -r encoded_codes codes
+if [ $? -eq 0 ]; then
+  echo OK zip
+  rm -r codes
+  gpg -c encoded_codes.zip
+  if [ $? -eq 0 ]; then echo ok gpg; rm  encoded_codes.zip; else echo Fail gpg; fi;
+else
+  echo FAIL zip
+fi
+
+
